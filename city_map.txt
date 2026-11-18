@@ -1,0 +1,50 @@
+# =====================================================
+#  Chaos City map - simplified Karachi
+#  INTERSECTION <name> <x> <y>        (x,y = screen position for GUI)
+#  ROAD <from> <to> <length_m> <lanes> <speed_kmh> <TWOWAY|ONEWAY>
+# =====================================================
+
+INTERSECTION Tower          120 520
+INTERSECTION Lyari           90 380
+INTERSECTION Saddar         250 450
+INTERSECTION Clifton        260 600
+INTERSECTION DHA            430 600
+INTERSECTION Korangi        640 560
+INTERSECTION Karsaz         450 400
+INTERSECTION Airport        700 360
+INTERSECTION Malir          840 300
+INTERSECTION Gulshan        520 250
+INTERSECTION Nazimabad      280 220
+INTERSECTION North_Karachi  330  70
+INTERSECTION Sohrab_Goth    560  90
+
+# --- Old city ---
+ROAD Tower        Saddar         2500  2  40  TWOWAY
+ROAD Tower        Lyari          3000  1  30  TWOWAY
+ROAD Tower        Clifton        5000  2  50  ONEWAY
+ROAD Lyari        Nazimabad      6500  2  40  TWOWAY
+
+# --- Saddar hub ---
+ROAD Saddar       Clifton        4500  2  40  TWOWAY
+ROAD Saddar       Karsaz         6000  3  70  TWOWAY
+ROAD Saddar       Nazimabad      7000  2  40  TWOWAY
+
+# --- South ---
+ROAD Clifton      DHA            4000  2  50  TWOWAY
+ROAD DHA          Karsaz         6500  2  50  TWOWAY
+ROAD DHA          Korangi        7000  2  50  TWOWAY
+ROAD Korangi      Airport        7500  2  50  TWOWAY
+ROAD Korangi      Malir          9000  1  40  ONEWAY
+
+# --- Shahrah-e-Faisal corridor ---
+ROAD Karsaz       Airport        8000  3  70  TWOWAY
+ROAD Karsaz       Gulshan        5000  2  50  TWOWAY
+ROAD Airport      Malir          6000  2  60  TWOWAY
+
+# --- North ---
+ROAD Gulshan      Airport        7000  2  50  TWOWAY
+ROAD Gulshan      Nazimabad      7500  2  40  TWOWAY
+ROAD Gulshan      Sohrab_Goth    6000  3  60  TWOWAY
+ROAD Nazimabad    North_Karachi  7000  2  40  TWOWAY
+ROAD North_Karachi Sohrab_Goth   5500  2  50  TWOWAY
+ROAD Sohrab_Goth  Malir         12000  3  70  TWOWAY

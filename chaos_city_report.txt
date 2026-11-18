@@ -1,0 +1,45 @@
+CHAOS CITY - SIMULATION REPORT
+==============================
+Scenario: Evacuation
+Simulated time: 0:15:00
+Signal strategy: Adaptive
+Spawn rate: 6 vehicles/min
+
+VEHICLES
+  Spawned 209, arrived 81, active 128, diverted 0, cancelled 0
+  Currently queued 1, waiting at origin 0
+
+TRIPS (AVL tree, height 7)
+  Average 544 s, median 469 s, 90th percentile 871 s
+  Fastest 226 s, slowest 898 s
+  Average wait 6 s, average distance 6.77778 km
+  By type: Car 553 s, Bus 501 s, Truck 0 s, Ambulance 0 s
+  Histogram (10-minute buckets): 45 | 36 | 0 | 0 | 0 | 0 (60+ min)
+
+MOST CONGESTED ROADS (merge sort)
+  1. Lyari -> Tower  25% full
+  2. Nazimabad -> North_Karachi  23% full
+  3. Gulshan -> Sohrab_Goth  16% full
+  4. Karsaz -> Gulshan  15% full
+  5. DHA -> Korangi  14% full
+
+CHAOS
+  Accidents 0, closures 0, surges 1, vehicles rerouted 0
+
+CORE NETWORK (minimum spanning tree, Kruskal)
+  63 km of 132.5 km, 1 component(s)
+  Tower - Saddar (2500 m)
+  Tower - Lyari (3000 m)
+  Clifton - DHA (4000 m)
+  Saddar - Clifton (4500 m)
+  Karsaz - Gulshan (5000 m)
+  North_Karachi - Sohrab_Goth (5500 m)
+  Saddar - Karsaz (6000 m)
+  Airport - Malir (6000 m)
+  Gulshan - Sohrab_Goth (6000 m)
+  Lyari - Nazimabad (6500 m)
+  DHA - Korangi (7000 m)
+  Airport - Gulshan (7000 m)
+
+EVENT LOG
+  [0:00:00] TRAFFIC SURGE: 120 vehicles leaving Saddar
